@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: openrestyweb
+  namespace: openresty
+  labels:
+    app: openresty
+spec:
+  selector:
+    matchLabels:
+      app: openresty
+  replicas: 3
+  template:
+    metadata:
+      labels:
+        app: openresty
+    spec:
+      containers:
+      - name: openresty-app
+        image: sppo55/openresty:kkk
+        ports:
+        - containerPort: 80
+        - containerPort: 443
+        volumeMounts:
+        - name: nginx-log
+          mountPath: /tmp
+      volumes:
+      - name: nginx-log
+        hostPath:
+          path: /tmp
+          type: ""

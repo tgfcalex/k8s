@@ -1,0 +1,5 @@
+kubeletConfig:
+  cpuManagerPolicy: static
+linuxConfig:
+  sysctl:
+    net.core.somaxconn: '32768'
