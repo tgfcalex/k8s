@@ -19,4 +19,4 @@ spec:
     protocol: TCP
     name: https
   type: LoadBalancer
-  loadBalancerIP: 34.80.212.150
+  loadBalancerIP: 34.81.192.166

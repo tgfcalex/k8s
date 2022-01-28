@@ -94,7 +94,7 @@ data:
     [OUTPUT]
         Name           kafka
         Match          kube.logging
-        Brokers        10.140.0.22:9092
+        Brokers        10.140.0.33:9092
         Topics         kafka_nginx
         topic_key      on
         Timestamp_Format iso8601
@@ -106,7 +106,7 @@ data:
     [OUTPUT]
         Name           kafka
         Match          kube.openresty
-        Brokers        10.140.0.22:9092
+        Brokers        10.140.0.33:9092
         Topics         kafka_openresty
         topic_key      on
         Timestamp_Format iso8601
@@ -118,7 +118,7 @@ data:
     [OUTPUT]
         Name           kafka
         Match          kube.go
-        Brokers        10.140.0.22:9092
+        Brokers        10.140.0.33:9092
         Topics         kafka_go
         Timestamp_Key  @timestamp
         Timestamp_Format iso8601
@@ -129,7 +129,7 @@ data:
     [OUTPUT]
         Name           kafka
         Match          kube.redis
-        Brokers        10.140.0.22:9092
+        Brokers        10.140.0.33:9092
         Topics         kafka_test
         Timestamp_Key  @timestamp
         Timestamp_Format iso8601

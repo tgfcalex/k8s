@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: fluent-bit-svc
+  namespace: logging
+  labels:
+    app: fluent-bit
+spec:
+  selector:
+    app: fluent-bit
+  ports:
+  - port: 25678
+    targetPort: 25678
+    protocol: TCP
+    name: http
+  type: LoadBalancer
+  loadBalancerIP: 34.80.212.150
